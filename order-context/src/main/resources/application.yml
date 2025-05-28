@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/orderdb
+    username: postgres
+    password: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+rabbitmq:
+  exchanges:
+    product: exchange.product
+  queues:
+    order:
+      productCreated: queue.order.productCreated
+  routing-keys:
+    product:
+      created: product.created
+server:
+  port: 8091
+
+

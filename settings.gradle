@@ -1,0 +1,6 @@
+rootProject.name = 'microservice-saga-pattern'
+
+include('order-context', 'product-context')
+
+project(':order-context').projectDir = file('order-context')
+project(':product-context').projectDir = file('product-context')
