@@ -4,10 +4,7 @@ package com.example.ordercontext.controller;
 import com.example.ordercontext.dtos.OrderDTO;
 import com.example.ordercontext.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RequiredArgsConstructor
@@ -19,6 +16,11 @@ public class OrderController {
 
     @PostMapping
     public void createOrder(@RequestBody OrderDTO orderDTO) {
-        //orderService.createOrder(orderDTO);
+        orderService.createOrder(orderDTO);
+    }
+
+    @GetMapping
+    public void getAllOrders() {
+        //orderService.getAllOrders();
     }
 }

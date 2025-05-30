@@ -1,4 +1,9 @@
+server:
+  port: 8090
+
 spring:
+  application:
+    name: product-context
   data:
     mongodb:
       host: localhost
@@ -9,6 +14,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+
 rabbitmq:
   exchanges:
     product: exchange.product
@@ -19,5 +25,4 @@ rabbitmq:
     product:
       created: product.created
 
-server:
-  port: 8090
+

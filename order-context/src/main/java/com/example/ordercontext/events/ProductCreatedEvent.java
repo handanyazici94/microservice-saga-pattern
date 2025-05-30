@@ -5,13 +5,6 @@ import lombok.Builder;
 import java.math.BigDecimal;
 
 @Builder
-public record ProductCreatedEvent(String id,
-        String name,
-        String description,
-        BigDecimal price){
-//    private String id;
-//    private String name;
-//    private String description;
-//    private BigDecimal price;
-}
+public record ProductCreatedEvent(String id, String name, String description, BigDecimal price)
+{ }
 

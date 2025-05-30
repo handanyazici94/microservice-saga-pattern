@@ -25,6 +25,7 @@ public class RabbitMQProperties {
     @Data
     public static class RoutingKeys {
         private Map<String, String> product;
+        private Map<String, String> order;
     }
 
     //endregion

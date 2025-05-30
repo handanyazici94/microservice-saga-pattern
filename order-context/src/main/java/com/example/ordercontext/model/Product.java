@@ -7,21 +7,22 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
+import java.math.BigDecimal;
 
 @Entity
-@Table(name = "order_item_model")
+@Table(name = "product_model")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OrderItem {
+public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String productId;
-    private String productName;
-    private int quantity;
+    private String id;
+
+    private String name;
+
+    private String description;
+
+    private BigDecimal price;
 }

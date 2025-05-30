@@ -13,7 +13,7 @@ import java.util.UUID;
 
 
 @Entity
-@Table(name = "order-model")
+@Table(name = "order_model")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,8 +21,8 @@ import java.util.UUID;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items;
